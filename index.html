@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonshot Digital — デジタルコンテンツレビュー</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a1a;
+      color: #e0e0ff;
+      font-family: 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .stars {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 35%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 85%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 50%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 65%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 75%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 45%, #fff 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .content { position: relative; z-index: 1; max-width: 600px; }
+    .logo { font-size: 3rem; margin-bottom: 0.5rem; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: #8888cc;
+      margin-bottom: 2rem;
+      letter-spacing: 0.1em;
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #4444aa, #aaaaff);
+      margin: 1.5rem auto;
+    }
+    p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #aaaacc;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid #3333aa;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #6666cc;
+      letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="content">
+    <div class="logo">🌙</div>
+    <h1>Moonshot Digital</h1>
+    <p class="tagline">デジタルコンテンツ・レビューメディア</p>
+    <div class="divider"></div>
+    <p>
+      厳選したデジタルコンテンツを紹介するレビューメディアです。<br>
+      ゲーム・動画・電子書籍など、様々なジャンルの作品をご紹介します。
+    </p>
+    <div class="badge">LAUNCHING SOON</div>
+  </div>
+</body>
+</html>
