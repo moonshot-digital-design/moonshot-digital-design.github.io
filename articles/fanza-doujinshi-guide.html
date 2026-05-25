@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FANZA 同人誌の選び方ガイド【2026年版】ジャンル別おすすめと購入のコツ — Moonshot Digital</title>
+  <meta name="description" content="FANZAの同人誌・同人CG集の選び方をジャンル別に解説。試し読みの活用法・お得な購入タイミング・対応デバイスまで初心者向けにまとめました。">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    a { color: #2255cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 3px solid #e84b4b;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+      max-width: 1060px; margin: 0 auto;
+      padding: 0 16px;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 56px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo-icon { font-size: 1.4rem; }
+    .logo-text { font-size: 1.1rem; font-weight: 700; color: #222; }
+    .logo-text span { color: #e84b4b; }
+    nav { display: flex; flex-wrap: wrap; gap: 2px; }
+    nav a {
+      color: #555; font-size: 0.82rem; padding: 6px 10px;
+      border-radius: 4px; text-decoration: none;
+    }
+    nav a:hover { background: #f5f5f5; color: #e84b4b; }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 28px;
+    }
+    @media (max-width: 720px) { .page-wrap { grid-template-columns: 1fr; } }
+
+    /* Article */
+    article {
+      background: #fff; border: 1px solid #e8e8e8;
+      border-radius: 8px; padding: 28px 32px;
+    }
+    @media (max-width: 600px) { article { padding: 18px 16px; } }
+
+    .breadcrumb { font-size: 0.78rem; color: #aaa; margin-bottom: 16px; }
+    .breadcrumb a { color: #888; }
+
+    .pr-badge {
+      display: inline-block; background: #fff3cd;
+      border: 1px solid #ffc107; border-radius: 4px;
+      font-size: 0.75rem; color: #856404;
+      padding: 3px 10px; margin-bottom: 14px; font-weight: 700;
+    }
+    .article-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      color: #e84b4b; border: 1px solid #e84b4b;
+      border-radius: 3px; padding: 1px 6px;
+      margin-bottom: 10px; margin-left: 8px;
+    }
+    h1 { font-size: 1.55rem; font-weight: 700; color: #111; line-height: 1.5; margin-bottom: 12px; }
+    .article-meta { font-size: 0.78rem; color: #aaa; padding-bottom: 18px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+
+    /* TOC */
+    .toc {
+      background: #f8f8f8; border: 1px solid #ddd;
+      border-radius: 6px; padding: 16px 20px; margin-bottom: 28px;
+    }
+    .toc-title { font-size: 0.85rem; font-weight: 700; color: #555; margin-bottom: 10px; }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 0.85rem; line-height: 1.9; }
+    .toc a { color: #2255cc; }
+
+    /* Content */
+    h2 {
+      font-size: 1.15rem; font-weight: 700; color: #fff;
+      background: #333; padding: 10px 14px;
+      margin: 32px 0 16px; border-radius: 4px;
+    }
+    h3 {
+      font-size: 1rem; font-weight: 700; color: #222;
+      border-left: 4px solid #e84b4b; padding-left: 10px;
+      margin: 24px 0 12px;
+    }
+    p { margin-bottom: 14px; line-height: 1.85; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { line-height: 1.85; margin-bottom: 4px; }
+
+    /* STEP boxes */
+    .step-list { list-style: none; padding: 0; margin-bottom: 20px; }
+    .step-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f0f0f0; }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      background: #e84b4b; color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      border-radius: 4px; padding: 3px 8px;
+      height: fit-content; flex-shrink: 0; white-space: nowrap;
+    }
+    .step-body strong { display: block; color: #222; margin-bottom: 4px; }
+    .step-body p { margin: 0; font-size: 0.9rem; color: #555; }
+
+    /* Callout */
+    .callout {
+      background: #eff6ff; border-left: 4px solid #2255cc;
+      padding: 14px 16px; border-radius: 0 6px 6px 0;
+      margin: 20px 0; font-size: 0.9rem;
+    }
+    .callout strong { color: #1133aa; display: block; margin-bottom: 4px; }
+
+    /* Warning callout */
+    .callout-warn {
+      background: #fff8e1; border-left: 4px solid #ffc107;
+      padding: 14px 16px; border-radius: 0 6px 6px 0;
+      margin: 20px 0; font-size: 0.9rem;
+    }
+    .callout-warn strong { color: #856404; display: block; margin-bottom: 4px; }
+
+    /* Genre grid */
+    .genre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px; margin: 16px 0;
+    }
+    .genre-card {
+      border: 1px solid #e8e8e8; border-radius: 8px;
+      padding: 14px; background: #fafafa;
+      transition: border-color 0.15s;
+    }
+    .genre-card:hover { border-color: #e84b4b; }
+    .genre-card strong { display: block; color: #222; margin-bottom: 6px; font-size: 0.92rem; }
+    .genre-card span { font-size: 0.8rem; color: #666; line-height: 1.6; }
+
+    /* Device table */
+    .device-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+    .device-table th { background: #333; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+    .device-table td { padding: 10px 12px; border-bottom: 1px solid #eee; color: #444; }
+    .device-table tr:nth-child(even) td { background: #f9f9f9; }
+    .ok { color: #2a9d2a; font-weight: 700; }
+    .ng { color: #cc2200; font-weight: 700; }
+
+    /* Check list */
+    .check-list { list-style: none; padding: 0; }
+    .check-list li {
+      padding: 10px 10px 10px 32px; position: relative;
+      border-bottom: 1px solid #f0f0f0; font-size: 0.92rem;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before { content: "✓"; position: absolute; left: 8px; color: #e84b4b; font-weight: 700; }
+
+    /* CTA block */
+    .cta-block {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+      border-radius: 8px; padding: 24px;
+      text-align: center; margin: 32px 0; color: #fff;
+    }
+    .cta-block p { color: #bbb; font-size: 0.9rem; margin-bottom: 14px; }
+    .cta-btn {
+      display: inline-block; background: #e84b4b; color: #fff;
+      font-size: 1rem; font-weight: 700;
+      padding: 12px 32px; border-radius: 6px; text-decoration: none;
+    }
+    .cta-btn:hover { background: #c93030; text-decoration: none; }
+    .cta-note { font-size: 0.72rem; color: #888; margin-top: 8px; }
+
+    /* Sidebar */
+    .sidebar-box { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; margin-bottom: 20px; overflow: hidden; }
+    .sidebar-head { background: #222; color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; padding: 10px 14px; }
+    .sidebar-body { padding: 14px; }
+    .sidebar-cat-list { list-style: none; }
+    .sidebar-cat-list li { border-bottom: 1px solid #f0f0f0; }
+    .sidebar-cat-list li:last-child { border-bottom: none; }
+    .sidebar-cat-list a { display: flex; align-items: center; gap: 8px; padding: 10px 4px; color: #444; font-size: 0.88rem; text-decoration: none; }
+    .sidebar-cat-list a:hover { color: #e84b4b; text-decoration: none; }
+    .sidebar-banner { background: linear-gradient(135deg, #1a1a2e, #2d1b69); color: #fff; text-align: center; padding: 20px 14px; border-radius: 8px; margin-bottom: 20px; }
+    .sidebar-banner strong { display: block; font-size: 0.9rem; margin-bottom: 6px; }
+    .sidebar-banner p { font-size: 0.82rem; color: #bbb; margin-bottom: 12px; line-height: 1.6; }
+    .sidebar-banner a { display: inline-block; background: #e84b4b; color: #fff; font-size: 0.85rem; font-weight: 700; padding: 8px 20px; border-radius: 4px; text-decoration: none; }
+    .sidebar-banner a:hover { background: #c93030; text-decoration: none; }
+
+    /* Footer */
+    footer { background: #222; color: #999; font-size: 0.78rem; padding: 28px 20px; text-align: center; line-height: 2; }
+    footer a { color: #888; }
+    .footer-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <span class="logo-icon">🌙</span>
+        <span class="logo-text">Moonshot <span>Digital</span></span>
+      </a>
+      <nav>
+        <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+        <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+        <a href="/articles/dmm-fanza-guide.html">DMM/FANZA</a>
+        <a href="/articles/fanza-doujinshi-guide.html">FANZA同人誌</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <article>
+      <div class="breadcrumb">
+        <a href="/">Moonshot Digital</a> &rsaquo; <a href="/articles/dmm-fanza-guide.html">DMM / FANZA</a> &rsaquo; FANZA 同人誌の選び方ガイド
+      </div>
+
+      <span class="pr-badge">PR・広告を含む記事です</span>
+      <span class="article-tag">FANZA 同人誌</span>
+
+      <h1>FANZA 同人誌の選び方ガイド【2026年版】ジャンル別おすすめと購入のコツ</h1>
+      <div class="article-meta">2026年5月15日 更新 · Moonshot Digital · 読了時間 約6分</div>
+
+      <div class="toc">
+        <div class="toc-title">📋 この記事の目次</div>
+        <ol>
+          <li><a href="#what">FANZAの同人誌とは</a></li>
+          <li><a href="#genre">コンテンツの種類・ジャンル</a></li>
+          <li><a href="#how">FANZAでの探し方（STEP）</a></li>
+          <li><a href="#checklist">購入前のチェックポイント</a></li>
+          <li><a href="#device">対応デバイス・読み方</a></li>
+          <li><a href="#sale">お得に買う方法</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ol>
+      </div>
+
+      <h2 id="what">FANZAの同人誌とは</h2>
+      <p>FANZA同人（旧：DMM同人）は、DMM.comが運営する同人コンテンツの販売プラットフォームです。個人・サークルが制作した同人誌・CG集・写真集などを即時ダウンロードで購入できます。</p>
+      <p>DLsiteと並ぶ国内最大級の同人プラットフォームで、<strong>特に同人誌（マンガ形式）とCG集の品揃えが国内トップクラス</strong>。数十万点以上の作品が揃い、有名サークルから新進気鋭のサークルまで幅広く取り扱っています。</p>
+
+      <div class="callout-warn">
+        <strong>⚠ 年齢確認について</strong>
+        FANZA同人のコンテンツの多くは成人向け（18歳以上対象）です。購入・閲覧には年齢確認とFANZAアカウントへのログインが必要です。
+      </div>
+
+      <h2 id="genre">コンテンツの種類・ジャンル</h2>
+      <p>FANZA同人では以下の形式のコンテンツが購入できます。</p>
+
+      <div class="genre-grid">
+        <div class="genre-card">
+          <strong>📖 同人誌（マンガ）</strong>
+          <span>最も点数が多いカテゴリ。ストーリー性のある作品から短編まで幅広い。ページ数・解像度を確認して選ぶ。</span>
+        </div>
+        <div class="genre-card">
+          <strong>🖼 CG集</strong>
+          <span>イラスト・CG作品のまとめ集。1枚絵〜数十枚構成まで様々。作者の画風を事前にサンプルで確認。</span>
+        </div>
+        <div class="genre-card">
+          <strong>📝 同人誌（テキスト）</strong>
+          <span>小説・シナリオ形式の作品。文字メインで絵が少ないため、文章の読み応えを重視。</span>
+        </div>
+        <div class="genre-card">
+          <strong>📷 写真集・グラビア</strong>
+          <span>コスプレ・グラビア系のデジタル写真集。高解像度JPEGで配布されることが多い。</span>
+        </div>
+        <div class="genre-card">
+          <strong>🎮 同人ゲーム</strong>
+          <span>FANZA経由でも同人ゲームが購入可能。DLsiteと重複する作品も多いが、FANZA限定作品もあり。</span>
+        </div>
+        <div class="genre-card">
+          <strong>🎙 同人音声</strong>
+          <span>音声作品もFANZA同人で購入可能。DLsiteの方が品揃えは豊富だが、FANZA独占作品も存在。</span>
+        </div>
+      </div>
+
+      <h2 id="how">FANZAでの探し方</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-num">STEP 1</span>
+          <div class="step-body">
+            <strong>DMMアカウントでログイン</strong>
+            <p>FANZAはDMMアカウントで利用できます。未登録の場合はDMM.comで会員登録（無料）後、年齢確認を完了させてください。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 2</span>
+          <div class="step-body">
+            <strong>「FANZA同人」トップからカテゴリを選ぶ</strong>
+            <p>同人誌（マンガ）・CG集・テキストなどカテゴリで絞り込み。上部ナビまたはサイドバーのジャンルリストから選択します。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 3</span>
+          <div class="step-body">
+            <strong>ランキング・新着・セールで探す</strong>
+            <p>「週間ランキング」は最も信頼性の高い指標。「新着」タブで最新作を、「セール中」フィルターで値引き作品をチェック。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 4</span>
+          <div class="step-body">
+            <strong>サンプル・試し読みで内容を確認</strong>
+            <p>ほとんどの作品にサンプル画像（8〜16ページ程度）が公開されています。画風・解像度・ストーリー方向を必ず確認してから購入。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 5</span>
+          <div class="step-body">
+            <strong>DMMポイントで購入してダウンロード</strong>
+            <p>購入後はブラウザ・専用アプリ・ダウンロードのいずれかで閲覧可能。PDF・ZIP形式でのダウンロードに対応している作品も多い。</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="cta-block">
+        <p>FANZA同人で人気の同人誌・CG集を探してみましょう。週間ランキングから入ると外れが少なくなります。</p>
+        <a class="cta-btn" href="https://www.dmm.co.jp/dc/doujin/-/list/=/media_type=manga/" target="_blank" rel="nofollow noopener">FANZA で人気の同人誌を見る →</a>
+        <div class="cta-note">※ 上記リンクはアフィリエイトリンクです</div>
+      </div>
+
+      <h2 id="checklist">購入前のチェックポイント</h2>
+
+      <h3>① サンプル画像のページ数と解像度を見る</h3>
+      <p>FANZA同人のサンプルは通常8〜16ページ。サンプルで画風・線の細かさ・塗りの方向性をしっかり確認しましょう。解像度が低い作品は拡大したときにボヤけることがあります。</p>
+
+      <h3>② ページ数と価格のバランスを確認する</h3>
+      <p>同人誌の相場感は概ね以下の通りです。</p>
+      <ul>
+        <li>〜30ページ：220〜550円前後</li>
+        <li>30〜60ページ：550〜1,100円前後</li>
+        <li>60ページ以上：1,100円〜（長編・フルカラー作品）</li>
+      </ul>
+      <p>フルカラー作品はモノクロより割高になる傾向があります。</p>
+
+      <h3>③ ファイル形式を確認する</h3>
+      <p>同人誌のファイル形式は主に以下の3種類です。</p>
+      <ul>
+        <li><strong>PDF</strong>：どのデバイスでも開きやすい汎用形式</li>
+        <li><strong>ZIP（JPG/PNG）</strong>：高解像度画像をまとめたもの。画質が最も高い</li>
+        <li><strong>ブラウザ・アプリ閲覧のみ</strong>：ダウンロード不可の作品も一部あり</li>
+      </ul>
+
+      <h3>④ サークルの過去作・評価を確認する</h3>
+      <p>気に入ったサークルは過去作の評価数・点数も確認。評価4.0以上・件数20件以上が安心の目安です。同じサークルの作品は画風・傾向が一定なので、1作気に入ったら過去作もチェックする価値があります。</p>
+
+      <div class="callout">
+        <strong>💡 ポイント</strong>
+        FANZAのウィッシュリスト機能を活用しましょう。気になる作品を登録しておくと、セール対象になったときに通知を受け取れます。セール時の割引率は30〜50%になることも多いです。
+      </div>
+
+      <h2 id="device">対応デバイス・読み方</h2>
+      <p>FANZAの同人誌は複数の方法で閲覧できます。自分の環境に合った方法を選びましょう。</p>
+
+      <table class="device-table">
+        <thead>
+          <tr><th>閲覧方法</th><th>PC</th><th>スマホ・タブレット</th><th>特徴</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ブラウザ閲覧</strong></td>
+            <td class="ok">○</td>
+            <td class="ok">○</td>
+            <td>追加インストール不要。どのデバイスでもすぐ読める。</td>
+          </tr>
+          <tr>
+            <td><strong>FANZAアプリ（iOS/Android）</strong></td>
+            <td class="ng">×</td>
+            <td class="ok">○</td>
+            <td>オフライン読書・ページめくり操作が快適。スマホ派に最適。</td>
+          </tr>
+          <tr>
+            <td><strong>ダウンロード（ZIP/PDF）</strong></td>
+            <td class="ok">○</td>
+            <td>△</td>
+            <td>ローカル保存して好きなビューワで読める。作品によって非対応の場合あり。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>スマートフォンでの閲覧が多い場合は<strong>FANZAアプリ</strong>のインストールをおすすめします。ページめくりが直感的で、オフライン保存も可能です。</p>
+
+      <h2 id="sale">お得に買う方法</h2>
+      <ul class="check-list">
+        <li><strong>週末セールを狙う</strong>：毎週末に特定ジャンルのポイント還元率アップセールが開催。タイミングを合わせて購入すると実質30〜50%割引になることも。</li>
+        <li><strong>まとめ買いキャンペーン</strong>：同一サークルの複数作品を同時購入すると追加割引が適用されるキャンペーンが定期開催。</li>
+        <li><strong>DMMポイントを事前購入</strong>：ポイントのまとめ購入時にボーナスポイントが付くタイミングを狙う。</li>
+        <li><strong>無料・お試し作品を先に読む</strong>：FANZAには無料配布の同人誌も多数。まず無料作品でサークルの画風を確認してから有料作品へ進むのが安全。</li>
+        <li><strong>ウィッシュリストに登録してセールを待つ</strong>：焦って定価購入せず、ウィッシュリストに追加してセール通知を受け取るのが最もコスパが良い。</li>
+      </ul>
+
+      <h2 id="summary">まとめ</h2>
+      <p>FANZAの同人誌・CG集は、国内最大級の品揃えと充実したサンプルが強みです。</p>
+      <ul>
+        <li>購入前に<strong>サンプル画像・ページ数・ファイル形式</strong>を必ず確認</li>
+        <li>評価件数20件以上・4.0以上のサークルから試すと外れが少ない</li>
+        <li><strong>ウィッシュリスト＋週末セール</strong>の組み合わせが最もお得</li>
+        <li>スマホで読むなら<strong>FANZAアプリ</strong>を活用する</li>
+        <li>気に入ったサークルは過去作もまとめてチェック</li>
+      </ul>
+
+      <div class="cta-block">
+        <p>まずはFANZA同人のランキングをチェック。サンプル無料・ポイント還元あり。</p>
+        <a class="cta-btn" href="https://www.dmm.co.jp/dc/doujin/-/list/=/media_type=manga/" target="_blank" rel="nofollow noopener">FANZA 同人誌ランキングを見る →</a>
+        <div class="cta-note">※ 上記リンクはアフィリエイトリンクです</div>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-banner">
+        <strong>FANZA 同人</strong>
+        <p>同人誌・CG集が国内最大級の品揃え。サンプル無料・ポイント還元あり。</p>
+        <a href="https://www.dmm.co.jp/dc/doujin/-/list/=/media_type=manga/" target="_blank" rel="nofollow noopener">同人誌を探す →</a>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">カテゴリ</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 同人音声・ASMR</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 同人ゲーム</a></li>
+            <li><a href="/articles/dmm-fanza-guide.html">📦 DMM / FANZA 概要</a></li>
+            <li><a href="/articles/fanza-doujinshi-guide.html">📖 FANZA 同人誌</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">関連記事</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dmm-fanza-guide.html">📦 DMM（FANZA）コンテンツ選び方ガイド</a></li>
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 DLsite 同人音声・ASMRの選び方</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 DLsite 同人ゲームの選び方</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+      <a href="/articles/dmm-fanza-guide.html">DMM/FANZA</a>
+      <a href="/articles/fanza-doujinshi-guide.html">FANZA同人誌</a>
+    </div>
+    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:6px">© 2026 Moonshot Digital</p>
+  </footer>
+
+</body>
+</html>
