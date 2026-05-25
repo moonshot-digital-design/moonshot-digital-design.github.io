@@ -3,181 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moonshot Digital — デジタルコンテンツ・レビューメディア</title>
+  <title>Moonshot Digital — DLsite・同人コンテンツのレビューメディア</title>
   <meta name="description" content="DLsite・DMMのデジタルコンテンツ（同人ゲーム・音声作品・電子書籍）をキュレーションして紹介するレビューメディアです。">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a1a;
-      color: #e0e0ff;
-      font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      min-height: 100vh;
-      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
     }
-    .stars {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      background:
-        radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 30% 60%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 50% 10%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 70% 80%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 85% 35%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 20% 85%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 60% 50%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 90% 65%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 45% 75%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 15% 45%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 55% 30%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 80% 15%, #fff 0%, transparent 100%);
-      pointer-events: none; z-index: 0;
-    }
+    a { color: #2255cc; text-decoration: none; }
+    a:hover { text-decoration: underline; color: #1133aa; }
+
+    /* Header */
     header {
-      position: relative; z-index: 1;
-      background: rgba(10,10,30,0.9);
-      border-bottom: 1px solid #1a1a4a;
-      padding: 1rem 2rem;
+      background: #fff;
+      border-bottom: 3px solid #e84b4b;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      height: 56px;
     }
-    .site-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
-    .site-logo span { font-size: 1.5rem; }
-    .site-logo strong { color: #fff; font-size: 1.1rem; letter-spacing: 0.05em; }
+    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo-icon { font-size: 1.4rem; }
+    .logo-text { font-size: 1.1rem; font-weight: 700; color: #222; letter-spacing: 0.03em; }
+    .logo-text span { color: #e84b4b; }
+    nav { display: flex; gap: 4px; }
     nav a {
-      color: #8888cc; text-decoration: none; margin-left: 1.5rem;
-      font-size: 0.85rem; letter-spacing: 0.05em;
+      color: #555; font-size: 0.85rem; padding: 6px 12px;
+      border-radius: 4px; text-decoration: none;
+      transition: background 0.15s;
     }
-    nav a:hover { color: #aaaaff; }
-    .hero {
-      position: relative; z-index: 1;
-      text-align: center;
-      padding: 4rem 2rem 3rem;
-      max-width: 700px;
+    nav a:hover { background: #f5f5f5; color: #e84b4b; text-decoration: none; }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1060px;
       margin: 0 auto;
-    }
-    .hero h1 { font-size: 1.8rem; color: #fff; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.4; }
-    .hero p { color: #8888cc; font-size: 0.95rem; line-height: 1.8; }
-    .divider { width: 50px; height: 2px; background: linear-gradient(90deg, #4444aa, #aaaaff); margin: 1.5rem auto; }
-    main {
-      position: relative; z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.5rem 4rem;
-    }
-    .section-title {
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      color: #6666aa;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      margin-top: 3rem;
-    }
-    .articles {
+      padding: 24px 16px 60px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr 280px;
+      gap: 28px;
     }
+    @media (max-width: 720px) {
+      .page-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 50%, #1a1a2e 100%);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-bottom: 0;
+    }
+    .hero h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+    .hero p { font-size: 0.9rem; color: #bbb; }
+
+    /* Section heading */
+    .section-head {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #999;
+      text-transform: uppercase;
+      border-left: 3px solid #e84b4b;
+      padding-left: 10px;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+    .section-head:first-child { margin-top: 0; }
+
+    /* Article cards */
+    .article-list { display: flex; flex-direction: column; gap: 16px; }
     .article-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid #1a1a4a;
-      border-radius: 12px;
-      padding: 1.5rem;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 16px;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.2s, background 0.2s;
+      transition: box-shadow 0.15s, border-color 0.15s;
     }
-    .article-card:hover { border-color: #4444aa; background: rgba(255,255,255,0.06); }
+    .article-card:hover {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      border-color: #e84b4b;
+      text-decoration: none;
+    }
+    .card-icon { font-size: 2rem; flex-shrink: 0; line-height: 1.2; }
+    .card-body { flex: 1; }
     .card-tag {
       display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #e84b4b;
+      border: 1px solid #e84b4b;
+      border-radius: 3px;
+      padding: 1px 6px;
+      margin-bottom: 6px;
+    }
+    .card-title { font-size: 1rem; font-weight: 700; color: #222; line-height: 1.5; margin-bottom: 6px; }
+    .card-desc { font-size: 0.85rem; color: #666; line-height: 1.6; }
+    .card-meta { font-size: 0.75rem; color: #aaa; margin-top: 8px; }
+
+    /* Sidebar */
+    .sidebar-box {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .sidebar-head {
+      background: #222;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
       letter-spacing: 0.1em;
-      color: #6666cc;
-      border: 1px solid #2222aa;
-      border-radius: 4px;
-      padding: 0.15rem 0.5rem;
-      margin-bottom: 0.8rem;
+      padding: 10px 14px;
     }
-    .card-title { font-size: 1rem; color: #e0e0ff; font-weight: 600; line-height: 1.5; margin-bottom: 0.6rem; }
-    .card-desc { font-size: 0.85rem; color: #6666aa; line-height: 1.7; }
-    .card-meta { margin-top: 1rem; font-size: 0.75rem; color: #444466; }
-    footer {
-      position: relative; z-index: 1;
-      border-top: 1px solid #1a1a4a;
-      padding: 2rem;
+    .sidebar-body { padding: 14px; }
+    .sidebar-cat-list { list-style: none; }
+    .sidebar-cat-list li { border-bottom: 1px solid #f0f0f0; }
+    .sidebar-cat-list li:last-child { border-bottom: none; }
+    .sidebar-cat-list a {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 4px; color: #444;
+      font-size: 0.88rem; text-decoration: none;
+    }
+    .sidebar-cat-list a:hover { color: #e84b4b; text-decoration: none; }
+    .sidebar-banner {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+      color: #fff;
       text-align: center;
-      font-size: 0.75rem;
-      color: #444466;
-      line-height: 1.8;
+      padding: 20px 14px;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
-    .social-links { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
-    .social-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.4rem 1rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid #2222aa;
-      border-radius: 20px;
-      color: #8888cc; text-decoration: none; font-size: 0.8rem;
-      transition: border-color 0.2s, color 0.2s;
+    .sidebar-banner strong { display: block; font-size: 0.9rem; margin-bottom: 6px; }
+    .sidebar-banner p { font-size: 0.82rem; color: #bbb; margin-bottom: 12px; line-height: 1.6; }
+    .sidebar-banner a {
+      display: inline-block;
+      background: #e84b4b; color: #fff;
+      font-size: 0.85rem; font-weight: 700;
+      padding: 8px 20px; border-radius: 4px;
+      text-decoration: none;
     }
-    .social-link:hover { border-color: #6666ff; color: #fff; }
+    .sidebar-banner a:hover { background: #c93030; text-decoration: none; }
+
+    /* Footer */
+    footer {
+      background: #222; color: #999;
+      font-size: 0.78rem; padding: 28px 20px;
+      text-align: center; line-height: 2;
+    }
+    footer a { color: #888; text-decoration: none; }
+    footer a:hover { color: #fff; }
+    .footer-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
 
   <header>
-    <a class="site-logo" href="/">
-      <span>🌙</span>
-      <strong>Moonshot Digital</strong>
-    </a>
-    <nav>
-      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
-      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
-    </nav>
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <span class="logo-icon">🌙</span>
+        <span class="logo-text">Moonshot <span>Digital</span></span>
+      </a>
+      <nav>
+        <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+        <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+      </nav>
+    </div>
   </header>
 
   <div class="hero">
-    <h1>デジタルコンテンツを、<br>もっと賢く楽しむ。</h1>
-    <div class="divider"></div>
-    <p>DLsite・DMMの同人音声・ゲーム・電子書籍から<br>
-    厳選したコンテンツをレビュー・紹介するメディアです。</p>
+    <h1>🌙 DLsite・同人コンテンツをもっと賢く楽しむ</h1>
+    <p>同人音声・ゲーム・ASMRをジャンル別に解説するキュレーションメディア</p>
   </div>
 
-  <main>
-    <p class="section-title">▸ 最新記事</p>
-    <div class="articles">
+  <div class="page-wrap">
+    <main>
+      <p class="section-head">最新記事</p>
+      <div class="article-list">
 
-      <a class="article-card" href="/articles/dlsite-doujin-voice-guide.html">
-        <span class="card-tag">同人音声 / ASMR</span>
-        <div class="card-title">DLsite 同人音声・ASMRの選び方ガイド【2026年版】</div>
-        <div class="card-desc">
-          初めて同人音声を購入する方向けに、DLsiteの音声作品の種類・ジャンル・選び方のポイントを解説します。
+        <a class="article-card" href="/articles/dlsite-doujin-voice-guide.html">
+          <div class="card-icon">🎙</div>
+          <div class="card-body">
+            <span class="card-tag">同人音声 / ASMR</span>
+            <div class="card-title">DLsite 同人音声・ASMRの選び方ガイド【2026年版】</div>
+            <div class="card-desc">初めて同人音声を購入する方向けに、ジャンル別の特徴・選び方のポイント・お得な購入方法を徹底解説します。</div>
+            <div class="card-meta">2026年5月 · Moonshot Digital</div>
+          </div>
+        </a>
+
+        <a class="article-card" href="/articles/dlsite-doujin-game-guide.html">
+          <div class="card-icon">🎮</div>
+          <div class="card-body">
+            <span class="card-tag">同人ゲーム</span>
+            <div class="card-title">DLsite 同人ゲームの選び方と注目ジャンル【2026年】</div>
+            <div class="card-desc">RPG・アドベンチャー・シミュレーションなどジャンル別の特徴と、購入前に確認すべきポイントをまとめました。</div>
+            <div class="card-meta">2026年5月 · Moonshot Digital</div>
+          </div>
+        </a>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-banner">
+        <strong>DLsite 公式</strong>
+        <p>国内最大級の同人コンテンツストア。音声・ゲーム・マンガが揃う。</p>
+        <a href="https://www.dlsite.com/" target="_blank" rel="nofollow noopener">DLsite を見る →</a>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">カテゴリ</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 同人音声・ASMR</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 同人ゲーム</a></li>
+          </ul>
         </div>
-        <div class="card-meta">2026年5月 · Moonshot Digital</div>
-      </a>
+      </div>
 
-      <a class="article-card" href="/articles/dlsite-doujin-game-guide.html">
-        <span class="card-tag">同人ゲーム</span>
-        <div class="card-title">DLsite 同人ゲームの選び方と注目ジャンル【2026年】</div>
-        <div class="card-desc">
-          DLsiteに揃う同人ゲームの多彩なジャンルを紹介。RPG・ADV・シミュレーションなど、ジャンル別の特徴と選び方のコツをまとめました。
+      <div class="sidebar-box">
+        <div class="sidebar-head">このサイトについて</div>
+        <div class="sidebar-body">
+          <p style="font-size:0.84rem;color:#666;line-height:1.7;">DLsite・DMMのデジタルコンテンツをジャンル別に紹介するキュレーションメディアです。</p>
+          <p style="margin-top:8px;font-size:0.84rem;"><a href="https://x.com/MoonshotDJP" target="_blank">𝕏 @MoonshotDJP</a></p>
         </div>
-        <div class="card-meta">2026年5月 · Moonshot Digital</div>
-      </a>
-
-    </div>
-  </main>
+      </div>
+    </aside>
+  </div>
 
   <footer>
-    <div class="social-links">
-      <a class="social-link" href="https://x.com/MoonshotDJP" target="_blank">𝕏 @MoonshotDJP</a>
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
     </div>
-    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。</p>
-    <p>記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
-    <p style="margin-top:0.5rem">© 2026 Moonshot Digital</p>
+    <p>【広告・PR】当サイトはDLsiteアフィリエイトプログラムに参加しています。記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:6px">© 2026 Moonshot Digital</p>
   </footer>
+
 </body>
 </html>

@@ -4,325 +4,489 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DLsite 同人音声・ASMRの選び方ガイド【2026年版】 — Moonshot Digital</title>
-  <meta name="description" content="DLsiteの同人音声・ASMR作品の種類・ジャンル・選び方のポイントを初心者向けに解説。おすすめジャンルや購入前に確認すべきポイントをまとめました。">
+  <meta name="description" content="DLsiteの同人音声・ASMR作品の選び方を初心者向けに解説。ジャンル別の特徴・購入前のチェックポイント・おすすめの探し方をまとめました。">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a1a;
-      color: #e0e0ff;
-      font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      min-height: 100vh;
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
     }
-    .stars {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      background:
-        radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 30% 60%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 50% 10%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 70% 80%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 85% 35%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 20% 85%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 60% 50%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 90% 65%, #fff 0%, transparent 100%);
-      pointer-events: none; z-index: 0;
-    }
+    a { color: #2255cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
     header {
-      position: relative; z-index: 1;
-      background: rgba(10,10,30,0.9);
-      border-bottom: 1px solid #1a1a4a;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      background: #fff;
+      border-bottom: 3px solid #e84b4b;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
-    .site-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
-    .site-logo span { font-size: 1.5rem; }
-    .site-logo strong { color: #fff; font-size: 1.1rem; letter-spacing: 0.05em; }
+    .header-inner {
+      max-width: 1060px; margin: 0 auto;
+      padding: 0 16px;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 56px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo-icon { font-size: 1.4rem; }
+    .logo-text { font-size: 1.1rem; font-weight: 700; color: #222; }
+    .logo-text span { color: #e84b4b; }
     nav a {
-      color: #8888cc; text-decoration: none; margin-left: 1.5rem;
-      font-size: 0.85rem; letter-spacing: 0.05em;
+      color: #555; font-size: 0.85rem; padding: 6px 12px;
+      border-radius: 4px; text-decoration: none; margin-left: 4px;
     }
-    nav a:hover { color: #aaaaff; }
-    .container {
-      position: relative; z-index: 1;
-      max-width: 740px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
+    nav a:hover { background: #f5f5f5; color: #e84b4b; }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 28px;
     }
+    @media (max-width: 720px) {
+      .page-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* Article */
+    article {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 28px 32px;
+    }
+    @media (max-width: 600px) { article { padding: 18px 16px; } }
+
     .breadcrumb {
-      font-size: 0.75rem;
-      color: #444466;
-      margin-bottom: 2rem;
+      font-size: 0.78rem; color: #aaa;
+      margin-bottom: 16px;
     }
-    .breadcrumb a { color: #6666aa; text-decoration: none; }
-    .breadcrumb a:hover { color: #aaaaff; }
+    .breadcrumb a { color: #888; }
+
+    /* PR badge */
+    .pr-badge {
+      display: inline-block;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: #856404;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
     .article-tag {
       display: inline-block;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      color: #6666cc;
-      border: 1px solid #2222aa;
-      border-radius: 4px;
-      padding: 0.15rem 0.5rem;
-      margin-bottom: 1rem;
+      font-size: 0.72rem; font-weight: 700;
+      color: #e84b4b; border: 1px solid #e84b4b;
+      border-radius: 3px; padding: 1px 6px;
+      margin-bottom: 10px; margin-left: 8px;
     }
+
     h1 {
-      font-size: 1.7rem;
-      color: #fff;
-      font-weight: 700;
-      line-height: 1.45;
-      margin-bottom: 1rem;
+      font-size: 1.55rem; font-weight: 700;
+      color: #111; line-height: 1.5;
+      margin-bottom: 12px;
     }
     .article-meta {
-      font-size: 0.78rem;
-      color: #444466;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #1a1a4a;
+      font-size: 0.78rem; color: #aaa;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
     }
-    .lead {
-      font-size: 1rem;
-      color: #aaaacc;
-      line-height: 1.9;
-      margin-bottom: 2.5rem;
-      padding: 1.2rem 1.5rem;
-      background: rgba(255,255,255,0.03);
-      border-left: 3px solid #4444aa;
-      border-radius: 0 8px 8px 0;
+
+    /* TOC */
+    .toc {
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
     }
+    .toc-title {
+      font-size: 0.85rem; font-weight: 700;
+      color: #555; margin-bottom: 10px;
+    }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 0.85rem; line-height: 1.9; }
+    .toc a { color: #2255cc; }
+
+    /* Content */
     h2 {
-      font-size: 1.2rem;
-      color: #ccccff;
-      font-weight: 700;
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #1a1a4a;
+      font-size: 1.15rem; font-weight: 700;
+      color: #fff;
+      background: #333;
+      padding: 10px 14px;
+      margin: 32px 0 16px;
+      border-radius: 4px;
     }
     h3 {
-      font-size: 1rem;
-      color: #aaaaee;
-      font-weight: 700;
-      margin: 1.8rem 0 0.7rem;
+      font-size: 1rem; font-weight: 700;
+      color: #222;
+      border-left: 4px solid #e84b4b;
+      padding-left: 10px;
+      margin: 24px 0 12px;
     }
-    p {
-      font-size: 0.92rem;
-      color: #b0b0cc;
-      line-height: 1.9;
-      margin-bottom: 1.1rem;
+    p { margin-bottom: 14px; line-height: 1.85; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { line-height: 1.85; margin-bottom: 4px; }
+
+    /* STEP boxes */
+    .step-list { list-style: none; padding: 0; margin-bottom: 20px; }
+    .step-item {
+      display: flex; gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
     }
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.2rem;
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      background: #e84b4b; color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      border-radius: 4px;
+      padding: 3px 8px;
+      height: fit-content;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
-    li {
-      font-size: 0.92rem;
-      color: #b0b0cc;
-      line-height: 1.8;
-      margin-bottom: 0.4rem;
+    .step-body strong { display: block; color: #222; margin-bottom: 4px; }
+    .step-body p { margin: 0; font-size: 0.9rem; color: #555; }
+
+    /* Callout */
+    .callout {
+      background: #eff6ff;
+      border-left: 4px solid #2255cc;
+      padding: 14px 16px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.9rem;
     }
-    .genre-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
+    .callout strong { color: #1133aa; display: block; margin-bottom: 4px; }
+
+    /* Product cards */
+    .product-cards { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
+    .product-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex; gap: 14px;
+      align-items: flex-start;
     }
-    .genre-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid #1a1a4a;
-      border-radius: 10px;
-      padding: 1rem 1.2rem;
+    .product-thumb {
+      width: 80px; height: 80px;
+      background: #f0f0f0;
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: flex; align-items: center;
+      justify-content: center;
+      font-size: 2rem;
     }
-    .genre-card strong {
-      display: block;
-      color: #ccccff;
-      font-size: 0.92rem;
-      margin-bottom: 0.4rem;
+    .product-info { flex: 1; }
+    .product-genre {
+      font-size: 0.72rem; color: #888;
+      margin-bottom: 4px;
     }
-    .genre-card span {
-      font-size: 0.8rem;
-      color: #666688;
-      line-height: 1.6;
+    .product-title {
+      font-size: 0.95rem; font-weight: 700;
+      color: #222; margin-bottom: 6px;
     }
-    .tip-box {
-      background: rgba(68,68,170,0.1);
-      border: 1px solid #2222aa;
-      border-radius: 10px;
-      padding: 1.2rem 1.5rem;
-      margin: 1.5rem 0;
+    .product-circle { font-size: 0.8rem; color: #888; margin-bottom: 6px; }
+    .product-price { font-size: 0.95rem; font-weight: 700; color: #e84b4b; }
+    .product-btn {
+      display: inline-block;
+      background: #e84b4b; color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      padding: 6px 14px; border-radius: 4px;
+      text-decoration: none; margin-top: 8px;
     }
-    .tip-box strong {
-      display: block;
-      color: #8888ff;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.6rem;
-    }
-    .tip-box p { margin: 0; color: #9999bb; font-size: 0.88rem; }
-    .cta-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid #2222aa;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin: 2.5rem 0;
+    .product-btn:hover { background: #c93030; text-decoration: none; }
+
+    /* CTA block */
+    .cta-block {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+      border-radius: 8px;
+      padding: 24px;
       text-align: center;
+      margin: 32px 0;
+      color: #fff;
     }
-    .cta-box p { color: #8888aa; font-size: 0.88rem; margin-bottom: 1rem; }
+    .cta-block p { color: #bbb; font-size: 0.9rem; margin-bottom: 14px; }
     .cta-btn {
       display: inline-block;
-      background: linear-gradient(135deg, #3333aa, #6666cc);
-      color: #fff;
+      background: #e84b4b; color: #fff;
+      font-size: 1rem; font-weight: 700;
+      padding: 12px 32px; border-radius: 6px;
       text-decoration: none;
-      padding: 0.7rem 2rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: opacity 0.2s;
     }
-    .cta-btn:hover { opacity: 0.85; }
-    .affiliate-note {
-      font-size: 0.75rem;
-      color: #444466;
-      margin-top: 0.6rem;
+    .cta-btn:hover { background: #c93030; text-decoration: none; }
+    .cta-note { font-size: 0.72rem; color: #888; margin-top: 8px; }
+
+    /* Genre table */
+    .genre-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+    .genre-table th {
+      background: #333; color: #fff;
+      padding: 10px 12px; text-align: left; font-weight: 700;
     }
+    .genre-table td {
+      padding: 10px 12px; border-bottom: 1px solid #eee;
+      vertical-align: top; color: #444;
+    }
+    .genre-table tr:nth-child(even) td { background: #f9f9f9; }
+
+    /* Sidebar */
+    .sidebar-box {
+      background: #fff; border: 1px solid #e8e8e8;
+      border-radius: 8px; margin-bottom: 20px; overflow: hidden;
+    }
+    .sidebar-head {
+      background: #222; color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; padding: 10px 14px;
+    }
+    .sidebar-body { padding: 14px; }
+    .sidebar-cat-list { list-style: none; }
+    .sidebar-cat-list li { border-bottom: 1px solid #f0f0f0; }
+    .sidebar-cat-list li:last-child { border-bottom: none; }
+    .sidebar-cat-list a {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 4px; color: #444;
+      font-size: 0.88rem; text-decoration: none;
+    }
+    .sidebar-cat-list a:hover { color: #e84b4b; text-decoration: none; }
+    .sidebar-banner {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+      color: #fff; text-align: center;
+      padding: 20px 14px; border-radius: 8px; margin-bottom: 20px;
+    }
+    .sidebar-banner strong { display: block; font-size: 0.9rem; margin-bottom: 6px; }
+    .sidebar-banner p { font-size: 0.82rem; color: #bbb; margin-bottom: 12px; line-height: 1.6; }
+    .sidebar-banner a {
+      display: inline-block; background: #e84b4b; color: #fff;
+      font-size: 0.85rem; font-weight: 700; padding: 8px 20px;
+      border-radius: 4px; text-decoration: none;
+    }
+    .sidebar-banner a:hover { background: #c93030; text-decoration: none; }
+
+    /* Footer */
     footer {
-      position: relative; z-index: 1;
-      border-top: 1px solid #1a1a4a;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #444466;
-      line-height: 1.8;
+      background: #222; color: #999;
+      font-size: 0.78rem; padding: 28px 20px;
+      text-align: center; line-height: 2;
     }
-    .social-links { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
-    .social-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.4rem 1rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid #2222aa;
-      border-radius: 20px;
-      color: #8888cc; text-decoration: none; font-size: 0.8rem;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .social-link:hover { border-color: #6666ff; color: #fff; }
+    footer a { color: #888; }
+    .footer-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
 
   <header>
-    <a class="site-logo" href="/">
-      <span>🌙</span>
-      <strong>Moonshot Digital</strong>
-    </a>
-    <nav>
-      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
-      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
-    </nav>
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <span class="logo-icon">🌙</span>
+        <span class="logo-text">Moonshot <span>Digital</span></span>
+      </a>
+      <nav>
+        <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+        <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="/">Moonshot Digital</a> &rsaquo; 同人音声 / ASMR &rsaquo; DLsite 同人音声・ASMRの選び方ガイド
-    </div>
-
-    <span class="article-tag">同人音声 / ASMR</span>
-    <h1>DLsite 同人音声・ASMRの選び方ガイド【2026年版】</h1>
-    <div class="article-meta">2026年5月 · Moonshot Digital · 読了時間：約6分</div>
-
-    <div class="lead">
-      DLsiteには数万点を超える同人音声・ASMR作品が揃っています。初めて購入する方にとっては「どのジャンルを選べばいいか」「サークルの品質をどう見極めるか」など迷いがちなポイントがあります。このガイドでは、ジャンル別の特徴と選び方のコツをまとめました。
-    </div>
-
-    <h2>同人音声とは？</h2>
-    <p>同人音声とは、個人や小規模サークルが制作した音声作品の総称です。プロの声優が出演するものから、一般声優・アマチュアが制作するものまで幅広く、DLsiteではデジタルデータとして即時ダウンロード購入が可能です。</p>
-    <p>一般的な商業オーディオブックや有名タイトルのドラマCDとは異なり、制作者が独自の世界観・ニッチなシチュエーションを直接作品に落とし込める点が同人音声の魅力です。</p>
-
-    <h2>主なジャンル・カテゴリ</h2>
-    <p>DLsiteの同人音声は大きく以下のジャンルに分かれます。それぞれの特徴を理解すると、自分に合った作品を探しやすくなります。</p>
-
-    <div class="genre-grid">
-      <div class="genre-card">
-        <strong>🎙 ASMR</strong>
-        <span>囁き声・環境音・タッピング音など、リラックス効果を重視した作品。睡眠導入や疲労回復を目的に楽しむユーザーが多い。</span>
+  <div class="page-wrap">
+    <article>
+      <div class="breadcrumb">
+        <a href="/">Moonshot Digital</a> &rsaquo; <a href="/articles/dlsite-doujin-voice-guide.html">同人音声・ASMR</a> &rsaquo; DLsite 同人音声・ASMRの選び方ガイド
       </div>
-      <div class="genre-card">
-        <strong>💬 催眠音声</strong>
-        <span>誘導・暗示を組み合わせたリラクゼーション系。深いリラックスを目指す独特の体験が特徴。</span>
+
+      <span class="pr-badge">PR・広告を含む記事です</span>
+      <span class="article-tag">同人音声 / ASMR</span>
+
+      <h1>DLsite 同人音声・ASMRの選び方ガイド【2026年版】</h1>
+      <div class="article-meta">2026年5月15日 更新 · Moonshot Digital · 読了時間 約6分</div>
+
+      <div class="toc">
+        <div class="toc-title">📋 この記事の目次</div>
+        <ol>
+          <li><a href="#what">同人音声とは？</a></li>
+          <li><a href="#genre">主なジャンル一覧</a></li>
+          <li><a href="#how">DLsiteでの探し方</a></li>
+          <li><a href="#checklist">購入前のチェックポイント5つ</a></li>
+          <li><a href="#beginner">初心者におすすめのジャンル</a></li>
+          <li><a href="#sale">お得に買う方法</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ol>
       </div>
-      <div class="genre-card">
-        <strong>📖 ボイスドラマ</strong>
-        <span>キャラクターとのシチュエーション音声。彼女視点・お姉さん視点など多彩なシナリオが揃う。</span>
+
+      <h2 id="what">同人音声とは？</h2>
+      <p>同人音声とは、個人や小規模サークルが制作した音声作品の総称です。DLsiteでは数万点を超える音声作品がデジタルデータとして即時ダウンロード購入できます。</p>
+      <p>商業オーディオブックとの最大の違いは、<strong>制作者が独自の世界観・ニッチなシチュエーションを直接作品に落とし込める</strong>点。プロ声優からアマチュアまで幅広く、価格は数百円〜数千円と手頃なものが多いです。</p>
+
+      <h2 id="genre">主なジャンル一覧</h2>
+      <p>DLsiteの同人音声は大きく以下のジャンルに分かれます。</p>
+
+      <table class="genre-table">
+        <thead>
+          <tr><th>ジャンル</th><th>特徴</th><th>こんな人向け</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ASMR</strong></td>
+            <td>囁き声・環境音・タッピング音でリラックス</td>
+            <td>睡眠導入・疲労回復したい人</td>
+          </tr>
+          <tr>
+            <td><strong>バイノーラル</strong></td>
+            <td>立体音響で没入感が高い録音方式</td>
+            <td>イヤホン派・音質重視の人</td>
+          </tr>
+          <tr>
+            <td><strong>ボイスドラマ</strong></td>
+            <td>シチュエーション×キャラクター音声</td>
+            <td>ストーリーを楽しみたい人</td>
+          </tr>
+          <tr>
+            <td><strong>催眠音声</strong></td>
+            <td>誘導・暗示を組み合わせたリラクゼーション</td>
+            <td>深いリラックスを求める人</td>
+          </tr>
+          <tr>
+            <td><strong>朗読・読み聞かせ</strong></td>
+            <td>小説・詩・童話などの音声化</td>
+            <td>勉強中のBGMにしたい人</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="how">DLsiteでの探し方</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-num">STEP 1</span>
+          <div class="step-body">
+            <strong>「音声・ASMR」カテゴリを開く</strong>
+            <p>DLsiteトップページ上部ナビから「音声・ASMR」を選択。新着・週間ランキング・月間ランキングのタブが表示されます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 2</span>
+          <div class="step-body">
+            <strong>ジャンルタグで絞り込む</strong>
+            <p>左側のフィルターから「バイノーラル」「囁き」「催眠」などのタグを選択。好みのシチュエーションに絞れます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 3</span>
+          <div class="step-body">
+            <strong>試聴サンプルを聴く</strong>
+            <p>作品ページの再生ボタンから無料サンプルを試聴。声質・音質・録音環境は作品ごとに大きく異なります。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 4</span>
+          <div class="step-body">
+            <strong>レビューと評価を確認する</strong>
+            <p>評価4.0以上・レビュー10件以上を目安に。同じサークルの過去作も確認すると品質のブレが把握できます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 5</span>
+          <div class="step-body">
+            <strong>購入・ダウンロード</strong>
+            <p>会員登録（無料）してから購入するとポイントが貯まります。購入後は即ダウンロード可能。</p>
+          </div>
+        </li>
+      </ul>
+
+      <h2 id="checklist">購入前のチェックポイント5つ</h2>
+
+      <h3>① 試聴サンプルを必ず聴く</h3>
+      <p>ASMR作品ではマイク品質が体験に直結します。「ダミーヘッドマイク使用」「バイノーラル録音」と明記された作品はイヤホンで聴くと立体感があります。</p>
+
+      <h3>② 収録時間とファイル形式を確認</h3>
+      <p>作品ページに収録時間・ファイル形式（MP3 / WAV / FLAC）が記載されています。スマートフォン再生メインならMP3、高音質を求めるならWAV/FLACを選びましょう。</p>
+
+      <h3>③ 評価件数と点数を見る</h3>
+      <p>評価4.0以上・件数10件以上が安心の目安。評価件数が少ない作品はサンプルで慎重に判断を。</p>
+
+      <h3>④ サークルの過去作を確認する</h3>
+      <p>気に入ったサークルは過去作も確認。継続してリリースしているサークルほど品質が安定しています。</p>
+
+      <h3>⑤ 価格帯とボリュームを照らし合わせる</h3>
+      <p>収録30分以上・1,000円前後が同人音声の相場感。価格が高い作品は収録時間・出演者・音質が充実している傾向があります。</p>
+
+      <div class="callout">
+        <strong>💡 ポイント</strong>
+        DLsite会員登録（無料）でポイント還元が受けられます。購入金額の最大5〜10%がポイントで返ってくるので、まず会員登録してから購入するのが必須です。
       </div>
-      <div class="genre-card">
-        <strong>🎭 キャラクターボイス</strong>
-        <span>特定のキャラクター・声質に特化した作品。ファン向けに設定された世界観を楽しむ形式。</span>
+
+      <h2 id="beginner">初心者におすすめのジャンル</h2>
+      <p>同人音声を初めて試すなら、まず<strong>ASMR系のリラックス・睡眠導入作品</strong>から入るのがおすすめです。シナリオへの没入度よりも「心地よい音」が主体なので、ハードルが低く楽しめます。</p>
+      <p>次のステップとして、気に入った声優・サークルのボイスドラマ作品に移行すると、同人音声の多様な楽しみ方が広がります。</p>
+
+      <div class="cta-block">
+        <p>DLsiteで同人音声・ASMR作品を探してみましょう。国内最大級の品揃え、試聴サンプル付きで安心。</p>
+        <a class="cta-btn" href="https://www.dlsite.com/home/fsr/=/work_type/SOU/order/trend" target="_blank" rel="nofollow noopener">DLsite で人気の音声作品を見る →</a>
+        <div class="cta-note">※ 上記リンクはアフィリエイトリンクです</div>
       </div>
-      <div class="genre-card">
-        <strong>🌙 バイノーラル録音</strong>
-        <span>立体音響（バイノーラル）技術を使用。イヤホンで聴くと音源の位置感が生まれる没入型の録音方式。</span>
+
+      <h2 id="sale">お得に買う方法</h2>
+      <ul>
+        <li><strong>会員登録（無料）</strong>：購入金額の最大10%がポイント還元</li>
+        <li><strong>ウィッシュリスト活用</strong>：気になる作品を登録してセール時にまとめ買い</li>
+        <li><strong>期間限定セール</strong>：DLsiteは月1〜2回ペースでポイントアップセールを実施</li>
+        <li><strong>まとめ購入割引</strong>：同一サークルの複数作品を同時購入すると割引が適用されることも</li>
+      </ul>
+
+      <h2 id="summary">まとめ</h2>
+      <p>DLsiteの同人音声・ASMR作品は、ジャンルの幅広さと個性的なサークルの多様な表現が魅力です。</p>
+      <ul>
+        <li>購入前に<strong>試聴サンプル・レビュー・ファイル形式</strong>を必ず確認する</li>
+        <li>初心者は<strong>ASMRリラックス系</strong>から入るのがおすすめ</li>
+        <li>気に入ったサークルはフォローして<strong>セール時にまとめ買い</strong></li>
+        <li>会員登録でポイント還元を受けながら賢く購入する</li>
+      </ul>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-banner">
+        <strong>DLsite 公式</strong>
+        <p>同人音声・ASMRが国内最大級の品揃え。試聴サンプル付き。</p>
+        <a href="https://www.dlsite.com/home/fsr/=/work_type/SOU/order/trend" target="_blank" rel="nofollow noopener">音声作品を探す →</a>
       </div>
-      <div class="genre-card">
-        <strong>📚 朗読・読み聞かせ</strong>
-        <span>小説・詩・童話などを声優が朗読するコンテンツ。寝かしつけや勉強中のBGMとして人気。</span>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">カテゴリ</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 同人音声・ASMR</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 同人ゲーム</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <h2>購入前に確認すべき5つのポイント</h2>
-
-    <h3>1. 試聴サンプルを必ず聴く</h3>
-    <p>DLsiteでは多くの作品に試聴サンプルが用意されています。声質・音質・録音環境は作品ごとに大きく異なるため、購入前に必ずサンプルで確認しましょう。特にASMR作品では、マイク品質が体験に直結します。</p>
-
-    <h3>2. サークルの過去作・レビューを見る</h3>
-    <p>作品ページには購入者レビューと評価スコアが表示されます。同じサークルの過去作品もチェックすることで、品質や方向性のブレが少ないサークルを見つけられます。評価件数が多く、4.0以上の評価を維持しているサークルは信頼の目安になります。</p>
-
-    <h3>3. 収録時間・ファイル形式を確認</h3>
-    <p>作品ページには収録時間とファイル形式（MP3 / WAV / FLAC など）が記載されています。高音質を求めるなら WAV / FLAC 対応作品を、スマートフォンでの再生メインなら MP3 形式が扱いやすいです。</p>
-
-    <h3>4. タグ・シチュエーション設定を読む</h3>
-    <p>DLsiteの作品ページには詳細なタグが設定されています。「バイノーラル」「囁き」「感情豊か」「低音ボイス」など、自分の好みに合ったタグを基準にフィルタリングすると探しやすくなります。</p>
-
-    <h3>5. セール・ポイント還元を活用する</h3>
-    <p>DLsiteでは定期的にポイント還元セールやまとめ買い割引が実施されます。気になる作品はウィッシュリストに追加しておき、セール時にまとめて購入するのが賢い使い方です。</p>
-
-    <div class="tip-box">
-      <strong>💡 POINT</strong>
-      <p>DLsite会員登録（無料）でポイントが貯まります。購入金額の最大5〜10%がポイントとして還元され、次回購入に使えます。まずは会員登録してから購入するのがおすすめです。</p>
-    </div>
-
-    <h2>初心者におすすめのジャンル</h2>
-    <p>同人音声を初めて試すなら、まず<strong>ASMR系のリラックス・睡眠導入作品</strong>から入るのがおすすめです。シナリオへの没入度よりも「心地よい音」を主体にしているため、音声作品に慣れていない方でもハードルが低く楽しめます。</p>
-    <p>次のステップとして、気に入った声優・サークルのボイスドラマ作品に移行すると、同人音声の多様な楽しみ方が広がります。</p>
-
-    <h2>DLsiteで同人音声を探す方法</h2>
-    <ol>
-      <li>DLsiteトップページ → 「音声・ASMR」カテゴリを選択</li>
-      <li>「新着」「ランキング」「おすすめ」タブを切り替えて作品を探す</li>
-      <li>詳細検索でジャンルタグ・価格帯・収録時間を絞り込む</li>
-      <li>試聴サンプルで声質・音質を確認</li>
-      <li>レビュー・評価を確認してから購入</li>
-    </ol>
-
-    <div class="cta-box">
-      <p>DLsiteで同人音声・ASMR作品を探してみましょう。国内最大級の品揃えで、試聴サンプル付きの作品が多数揃っています。</p>
-      <a class="cta-btn" href="https://www.dlsite.com/home/fsr/=/work_type/SOU/order/trend" target="_blank" rel="nofollow noopener">DLsite で人気の音声作品を見る →</a>
-      <div class="affiliate-note">※ 上記リンクはアフィリエイトリンクです</div>
-    </div>
-
-    <h2>まとめ</h2>
-    <p>DLsiteの同人音声・ASMR作品は、ジャンルの幅広さと個性的なサークルの多様な表現が魅力です。購入前にサンプル試聴・レビュー確認・ファイル形式の確認を行う習慣をつけると、満足度の高い選択ができます。</p>
-    <p>気になるサークルを見つけたらフォロー機能を活用して新作情報をキャッチし、セール時にまとめて購入する方法が長く楽しむコツです。</p>
+      <div class="sidebar-box">
+        <div class="sidebar-head">関連記事</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 DLsite 同人ゲームの選び方【2026年】</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <footer>
-    <div class="social-links">
-      <a class="social-link" href="https://x.com/MoonshotDJP" target="_blank">𝕏 @MoonshotDJP</a>
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
     </div>
-    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。</p>
-    <p>記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
-    <p style="margin-top:0.5rem">© 2026 Moonshot Digital</p>
+    <p>【広告・PR】当サイトはDLsiteアフィリエイトプログラムに参加しています。記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:6px">© 2026 Moonshot Digital</p>
   </footer>
+
 </body>
 </html>
