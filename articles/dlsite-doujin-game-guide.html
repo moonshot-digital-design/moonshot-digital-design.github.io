@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLsite 同人ゲームの選び方と注目ジャンル【2026年】 — Moonshot Digital</title>
+  <meta name="description" content="DLsiteに揃う同人ゲームのジャンル別特徴・選び方のポイントを解説。RPG・アドベンチャー・シミュレーションなど、初めての方でも迷わない購入ガイドです。">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a1a;
+      color: #e0e0ff;
+      font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      min-height: 100vh;
+    }
+    .stars {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 35%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 85%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 50%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 65%, #fff 0%, transparent 100%);
+      pointer-events: none; z-index: 0;
+    }
+    header {
+      position: relative; z-index: 1;
+      background: rgba(10,10,30,0.9);
+      border-bottom: 1px solid #1a1a4a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .site-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .site-logo span { font-size: 1.5rem; }
+    .site-logo strong { color: #fff; font-size: 1.1rem; letter-spacing: 0.05em; }
+    nav a {
+      color: #8888cc; text-decoration: none; margin-left: 1.5rem;
+      font-size: 0.85rem; letter-spacing: 0.05em;
+    }
+    nav a:hover { color: #aaaaff; }
+    .container {
+      position: relative; z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .breadcrumb {
+      font-size: 0.75rem;
+      color: #444466;
+      margin-bottom: 2rem;
+    }
+    .breadcrumb a { color: #6666aa; text-decoration: none; }
+    .breadcrumb a:hover { color: #aaaaff; }
+    .article-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: #6666cc;
+      border: 1px solid #2222aa;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 1rem;
+    }
+    .article-meta {
+      font-size: 0.78rem;
+      color: #444466;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1a1a4a;
+    }
+    .lead {
+      font-size: 1rem;
+      color: #aaaacc;
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+      padding: 1.2rem 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid #4444aa;
+      border-radius: 0 8px 8px 0;
+    }
+    h2 {
+      font-size: 1.2rem;
+      color: #ccccff;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #1a1a4a;
+    }
+    h3 {
+      font-size: 1rem;
+      color: #aaaaee;
+      font-weight: 700;
+      margin: 1.8rem 0 0.7rem;
+    }
+    p {
+      font-size: 0.92rem;
+      color: #b0b0cc;
+      line-height: 1.9;
+      margin-bottom: 1.1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      font-size: 0.92rem;
+      color: #b0b0cc;
+      line-height: 1.8;
+      margin-bottom: 0.4rem;
+    }
+    .genre-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.88rem;
+    }
+    .genre-table th {
+      background: rgba(68,68,170,0.15);
+      color: #aaaaee;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #2222aa;
+      font-weight: 600;
+    }
+    .genre-table td {
+      padding: 0.7rem 1rem;
+      color: #9999bb;
+      border-bottom: 1px solid #111130;
+      vertical-align: top;
+    }
+    .genre-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+    .badge-hot { background: rgba(200,80,80,0.2); color: #cc6666; border: 1px solid #882222; }
+    .badge-new { background: rgba(80,130,200,0.2); color: #6688cc; border: 1px solid #224488; }
+    .tip-box {
+      background: rgba(68,68,170,0.1);
+      border: 1px solid #2222aa;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tip-box strong {
+      display: block;
+      color: #8888ff;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6rem;
+    }
+    .tip-box p { margin: 0; color: #9999bb; font-size: 0.88rem; }
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      padding-left: 1.8rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #6666cc;
+      font-weight: 700;
+    }
+    .cta-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #2222aa;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box p { color: #8888aa; font-size: 0.88rem; margin-bottom: 1rem; }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #3333aa, #6666cc);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .affiliate-note {
+      font-size: 0.75rem;
+      color: #444466;
+      margin-top: 0.6rem;
+    }
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid #1a1a4a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #444466;
+      line-height: 1.8;
+    }
+    .social-links { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid #2222aa;
+      border-radius: 20px;
+      color: #8888cc; text-decoration: none; font-size: 0.8rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .social-link:hover { border-color: #6666ff; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <a class="site-logo" href="/">
+      <span>🌙</span>
+      <strong>Moonshot Digital</strong>
+    </a>
+    <nav>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Moonshot Digital</a> &rsaquo; 同人ゲーム &rsaquo; DLsite 同人ゲームの選び方と注目ジャンル
+    </div>
+
+    <span class="article-tag">同人ゲーム</span>
+    <h1>DLsite 同人ゲームの選び方と注目ジャンル【2026年】</h1>
+    <div class="article-meta">2026年5月 · Moonshot Digital · 読了時間：約6分</div>
+
+    <div class="lead">
+      DLsiteには個人・小規模サークルが制作した多彩な同人ゲームが数万タイトル揃っています。RPG・アドベンチャー・シミュレーションなどジャンルも豊富で、メジャータイトルでは体験できないニッチな設定や世界観が同人ゲームの醍醐味です。このガイドでは、ジャンル別の特徴と購入時のポイントを整理します。
+    </div>
+
+    <h2>DLsite 同人ゲームの特徴</h2>
+    <p>DLsiteの同人ゲームは、主にWindowsおよびAndroid向けのダウンロード販売形式で提供されています。1〜2人の個人開発から、数名のサークルによる大規模プロジェクトまで規模は様々です。</p>
+    <p>商業ゲームとの最大の違いは「制作者の個性がダイレクトに反映される」点にあります。独創的なシステム設計、既存ジャンルの大胆な組み合わせ、ニッチな題材など、メジャータイトルでは実現しにくい表現が多く見られます。</p>
+
+    <h2>ジャンル別の特徴一覧</h2>
+
+    <table class="genre-table">
+      <thead>
+        <tr>
+          <th>ジャンル</th>
+          <th>特徴・向いている人</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>RPG</strong> <span class="badge badge-hot">人気</span></td>
+          <td>ターン制・アクションRPGなど多彩。世界観・戦闘システムが個性的な作品が多い。ボリューム重視の方に。</td>
+        </tr>
+        <tr>
+          <td><strong>アドベンチャー（ADV）</strong> <span class="badge badge-hot">人気</span></td>
+          <td>ノベルゲーム・サウンドノベル形式。シナリオ・キャラクター重視。読書感覚で楽しめる。</td>
+        </tr>
+        <tr>
+          <td><strong>シミュレーション</strong></td>
+          <td>育成・経営・ストラテジーなど。じっくりと戦略を組み立てる楽しさ。やり込み要素が充実している作品も多い。</td>
+        </tr>
+        <tr>
+          <td><strong>アクション</strong></td>
+          <td>横スクロール・俯瞰型アクションなど。操作感・難易度調整が重要。デモ体験版がある作品を選ぶと安心。</td>
+        </tr>
+        <tr>
+          <td><strong>パズル・脱出</strong></td>
+          <td>謎解き・ロジックパズル中心。短時間でクリアできる作品から長編まで幅広い。価格が手頃な作品が多い。</td>
+        </tr>
+        <tr>
+          <td><strong>育成・恋愛シミュレーション</strong></td>
+          <td>キャラクターの育成・関係性の変化を楽しむ形式。ストーリーと日常会話が充実している作品が人気。</td>
+        </tr>
+        <tr>
+          <td><strong>ホラー</strong> <span class="badge badge-new">注目</span></td>
+          <td>探索型・サバイバルホラーなど。没入感の高い世界観と緊張感が特徴。ドット絵×ホラーの組み合わせが同人ならでは。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>購入前に確認すべきポイント</h2>
+
+    <h3>対応OS・動作環境を確認する</h3>
+    <p>同人ゲームはWindows専用のものが多く、macOSでは動作しない場合があります。作品ページの「動作環境」欄で対応OSを確認し、必要であればWindowsエミュレーター（Wineskinなど）の使用を検討してください。</p>
+
+    <h3>体験版・デモがある作品を優先する</h3>
+    <p>DLsiteでは体験版を無料配布しているサークルも多くあります。特にアクション・RPGなど操作感が重要なジャンルは、体験版で実際のゲームプレイを確認してから購入するのが安心です。</p>
+
+    <h3>プレイ時間・ボリュームを把握する</h3>
+    <p>作品ページやレビューにプレイ時間の目安が記載されていることが多いです。短編（1〜3時間）か長編（10時間以上）かによって、価格への期待値も変わります。短編でも完成度が高ければ十分な満足感が得られます。</p>
+
+    <h3>制作ツール・エンジンを確認する</h3>
+    <p>RPGツクール系・Unity・Godot・Tyranoスクリプトなど、制作ツールにより操作感が大きく異なります。普段から触れ慣れているエンジンの作品を選ぶと、インターフェース面での戸惑いが少なくなります。</p>
+
+    <div class="tip-box">
+      <strong>💡 POINT</strong>
+      <p>DLsiteのランキングページでは「週間」「月間」「年間」の売上ランキングが確認できます。ランキング上位に入り続けている作品は、長期間にわたって評価されている証拠で、初めての購入に向いています。</p>
+    </div>
+
+    <h2>2026年の注目ジャンル動向</h2>
+    <p>近年のDLsite同人ゲームでは、以下のトレンドが継続して注目されています。</p>
+
+    <ul class="checklist">
+      <li><strong>ローグライク系RPG</strong>：毎回異なるダンジョン構成・ランダム要素で高いリプレイ性。短時間でも楽しめる設計が人気。</li>
+      <li><strong>短編ホラー・脱出ゲーム</strong>：1〜3時間でクリアできるボリューム設計。低価格でも完成度が高い作品が増加。</li>
+      <li><strong>マルチエンド ADV</strong>：選択肢による分岐が豊富で、周回プレイを前提とした設計のシナリオゲーム。</li>
+      <li><strong>ドット絵×現代的システム</strong>：レトロなビジュアルに最新のUI設計を組み合わせた作品が根強い人気。</li>
+    </ul>
+
+    <h2>お得に購入する方法</h2>
+    <p>DLsiteでは以下の方法でよりお得にゲームを購入できます。</p>
+
+    <ol>
+      <li><strong>会員登録（無料）</strong>してポイント還元を受ける。購入金額の最大10%がポイントで返ってくる。</li>
+      <li><strong>まとめ買い割引</strong>：同一サークルの複数作品を同時購入すると割引が適用される場合がある。</li>
+      <li><strong>セールを狙う</strong>：年に数回、大型セールが実施される。気になる作品をウィッシュリストに登録しておく。</li>
+      <li><strong>定期会員（DLsiteプレミアム）</strong>：月額サービスを利用することで追加ポイント還元や先行セールアクセスが可能。</li>
+    </ol>
+
+    <div class="cta-box">
+      <p>DLsiteで同人ゲームのランキングを確認してみましょう。週間・月間の売れ筋タイトルから探すと、外れが少なくなります。</p>
+      <a class="cta-btn" href="https://www.dlsite.com/home/fsr/=/work_type/RPG,ADV,SLG/order/trend" target="_blank" rel="nofollow noopener">DLsite で人気の同人ゲームを見る →</a>
+      <div class="affiliate-note">※ 上記リンクはアフィリエイトリンクです</div>
+    </div>
+
+    <h2>まとめ</h2>
+    <p>DLsiteの同人ゲームは、ジャンルの幅広さとサークルごとの個性が最大の魅力です。購入前に動作環境・体験版・レビューを確認する習慣をつけることで、満足度の高い選択ができます。</p>
+    <p>ランキングや人気タグを活用しながら自分のプレイスタイルに合ったジャンルを絞り込み、まず手頃な価格の短編作品から試してみるのが、同人ゲームを楽しむ第一歩としておすすめです。</p>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a class="social-link" href="https://x.com/MoonshotDJP" target="_blank">𝕏 @MoonshotDJP</a>
+    </div>
+    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。</p>
+    <p>記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:0.5rem">© 2026 Moonshot Digital</p>
+  </footer>
+</body>
+</html>

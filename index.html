@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moonshot Digital — デジタルコンテンツレビュー</title>
+  <title>Moonshot Digital — デジタルコンテンツ・レビューメディア</title>
+  <meta name="description" content="DLsite・DMMのデジタルコンテンツ（同人ゲーム・音声作品・電子書籍）をキュレーションして紹介するレビューメディアです。">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: #0a0a1a;
       color: #e0e0ff;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
+      padding: 0;
     }
     .stars {
-      position: fixed;
-      top: 0; left: 0;
+      position: fixed; top: 0; left: 0;
       width: 100%; height: 100%;
       background:
         radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
@@ -32,98 +27,157 @@
         radial-gradient(1px 1px at 60% 50%, #fff 0%, transparent 100%),
         radial-gradient(1px 1px at 90% 65%, #fff 0%, transparent 100%),
         radial-gradient(1px 1px at 45% 75%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 15% 45%, #fff 0%, transparent 100%);
-      pointer-events: none;
-      z-index: 0;
+        radial-gradient(1px 1px at 15% 45%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 30%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 15%, #fff 0%, transparent 100%);
+      pointer-events: none; z-index: 0;
     }
-    .content { position: relative; z-index: 1; max-width: 600px; }
-    .logo { font-size: 3rem; margin-bottom: 0.5rem; }
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-    .tagline {
-      font-size: 1rem;
-      color: #8888cc;
-      margin-bottom: 2rem;
-      letter-spacing: 0.1em;
-    }
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: linear-gradient(90deg, #4444aa, #aaaaff);
-      margin: 1.5rem auto;
-    }
-    p {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #aaaacc;
-    }
-    .badge {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid #3333aa;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      color: #6666cc;
-      letter-spacing: 0.15em;
-    }
-    .social-links {
-      margin-top: 2rem;
+    header {
+      position: relative; z-index: 1;
+      background: rgba(10,10,30,0.9);
+      border-bottom: 1px solid #1a1a4a;
+      padding: 1rem 2rem;
       display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .social-link {
-      display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1.2rem;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid #2222aa;
-      border-radius: 24px;
-      color: #aaaaee;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .site-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .site-logo span { font-size: 1.5rem; }
+    .site-logo strong { color: #fff; font-size: 1.1rem; letter-spacing: 0.05em; }
+    nav a {
+      color: #8888cc; text-decoration: none; margin-left: 1.5rem;
+      font-size: 0.85rem; letter-spacing: 0.05em;
+    }
+    nav a:hover { color: #aaaaff; }
+    .hero {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero h1 { font-size: 1.8rem; color: #fff; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.4; }
+    .hero p { color: #8888cc; font-size: 0.95rem; line-height: 1.8; }
+    .divider { width: 50px; height: 2px; background: linear-gradient(90deg, #4444aa, #aaaaff); margin: 1.5rem auto; }
+    main {
+      position: relative; z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .section-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: #6666aa;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+    }
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .article-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #1a1a4a;
+      border-radius: 12px;
+      padding: 1.5rem;
       text-decoration: none;
-      font-size: 0.85rem;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .article-card:hover { border-color: #4444aa; background: rgba(255,255,255,0.06); }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: #6666cc;
+      border: 1px solid #2222aa;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .card-title { font-size: 1rem; color: #e0e0ff; font-weight: 600; line-height: 1.5; margin-bottom: 0.6rem; }
+    .card-desc { font-size: 0.85rem; color: #6666aa; line-height: 1.7; }
+    .card-meta { margin-top: 1rem; font-size: 0.75rem; color: #444466; }
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid #1a1a4a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #444466;
+      line-height: 1.8;
+    }
+    .social-links { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid #2222aa;
+      border-radius: 20px;
+      color: #8888cc; text-decoration: none; font-size: 0.8rem;
       transition: border-color 0.2s, color 0.2s;
     }
-    .social-link:hover { border-color: #6666ff; color: #ffffff; }
-    .disclosure {
-      margin-top: 2.5rem;
-      font-size: 0.7rem;
-      color: #444466;
-      line-height: 1.6;
-    }
+    .social-link:hover { border-color: #6666ff; color: #fff; }
   </style>
 </head>
 <body>
   <div class="stars"></div>
-  <div class="content">
-    <div class="logo">🌙</div>
-    <h1>Moonshot Digital</h1>
-    <p class="tagline">デジタルコンテンツ・レビューメディア</p>
+
+  <header>
+    <a class="site-logo" href="/">
+      <span>🌙</span>
+      <strong>Moonshot Digital</strong>
+    </a>
+    <nav>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>デジタルコンテンツを、<br>もっと賢く楽しむ。</h1>
     <div class="divider"></div>
-    <p>
-      厳選したデジタルコンテンツを紹介するレビューメディアです。<br>
-      ゲーム・動画・電子書籍など、様々なジャンルの作品をご紹介します。
-    </p>
-    <div class="badge">LAUNCHING SOON</div>
-
-    <div class="social-links">
-      <a class="social-link" href="https://x.com/MoonshotDJP" target="_blank">
-        𝕏 @MoonshotDJP
-      </a>
-    </div>
-
-    <p class="disclosure">
-      当サイトはDMMアフィリエイトプログラムに参加しています。<br>
-      コンテンツには広告・PR情報が含まれます。
-    </p>
+    <p>DLsite・DMMの同人音声・ゲーム・電子書籍から<br>
+    厳選したコンテンツをレビュー・紹介するメディアです。</p>
   </div>
+
+  <main>
+    <p class="section-title">▸ 最新記事</p>
+    <div class="articles">
+
+      <a class="article-card" href="/articles/dlsite-doujin-voice-guide.html">
+        <span class="card-tag">同人音声 / ASMR</span>
+        <div class="card-title">DLsite 同人音声・ASMRの選び方ガイド【2026年版】</div>
+        <div class="card-desc">
+          初めて同人音声を購入する方向けに、DLsiteの音声作品の種類・ジャンル・選び方のポイントを解説します。
+        </div>
+        <div class="card-meta">2026年5月 · Moonshot Digital</div>
+      </a>
+
+      <a class="article-card" href="/articles/dlsite-doujin-game-guide.html">
+        <span class="card-tag">同人ゲーム</span>
+        <div class="card-title">DLsite 同人ゲームの選び方と注目ジャンル【2026年】</div>
+        <div class="card-desc">
+          DLsiteに揃う同人ゲームの多彩なジャンルを紹介。RPG・ADV・シミュレーションなど、ジャンル別の特徴と選び方のコツをまとめました。
+        </div>
+        <div class="card-meta">2026年5月 · Moonshot Digital</div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a class="social-link" href="https://x.com/MoonshotDJP" target="_blank">𝕏 @MoonshotDJP</a>
+    </div>
+    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。</p>
+    <p>記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:0.5rem">© 2026 Moonshot Digital</p>
+  </footer>
 </body>
 </html>
