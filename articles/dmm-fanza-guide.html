@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMM（FANZA）デジタルコンテンツの選び方ガイド【2026年版】 — Moonshot Digital</title>
+  <meta name="description" content="DMM・FANZAで購入できる電子書籍・動画・同人コンテンツの種類と選び方を初心者向けに解説。お得な購入方法やDLsiteとの違いもまとめました。">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    a { color: #2255cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 3px solid #e84b4b;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+      max-width: 1060px; margin: 0 auto;
+      padding: 0 16px;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 56px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo-icon { font-size: 1.4rem; }
+    .logo-text { font-size: 1.1rem; font-weight: 700; color: #222; }
+    .logo-text span { color: #e84b4b; }
+    nav a {
+      color: #555; font-size: 0.85rem; padding: 6px 12px;
+      border-radius: 4px; text-decoration: none; margin-left: 4px;
+    }
+    nav a:hover { background: #f5f5f5; color: #e84b4b; }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 28px;
+    }
+    @media (max-width: 720px) { .page-wrap { grid-template-columns: 1fr; } }
+
+    /* Article */
+    article {
+      background: #fff; border: 1px solid #e8e8e8;
+      border-radius: 8px; padding: 28px 32px;
+    }
+    @media (max-width: 600px) { article { padding: 18px 16px; } }
+
+    .breadcrumb { font-size: 0.78rem; color: #aaa; margin-bottom: 16px; }
+    .breadcrumb a { color: #888; }
+
+    .pr-badge {
+      display: inline-block; background: #fff3cd;
+      border: 1px solid #ffc107; border-radius: 4px;
+      font-size: 0.75rem; color: #856404;
+      padding: 3px 10px; margin-bottom: 14px; font-weight: 700;
+    }
+    .article-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      color: #e84b4b; border: 1px solid #e84b4b;
+      border-radius: 3px; padding: 1px 6px;
+      margin-bottom: 10px; margin-left: 8px;
+    }
+    h1 { font-size: 1.55rem; font-weight: 700; color: #111; line-height: 1.5; margin-bottom: 12px; }
+    .article-meta { font-size: 0.78rem; color: #aaa; padding-bottom: 18px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+
+    /* TOC */
+    .toc {
+      background: #f8f8f8; border: 1px solid #ddd;
+      border-radius: 6px; padding: 16px 20px; margin-bottom: 28px;
+    }
+    .toc-title { font-size: 0.85rem; font-weight: 700; color: #555; margin-bottom: 10px; }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 0.85rem; line-height: 1.9; }
+    .toc a { color: #2255cc; }
+
+    /* Content */
+    h2 {
+      font-size: 1.15rem; font-weight: 700; color: #fff;
+      background: #333; padding: 10px 14px;
+      margin: 32px 0 16px; border-radius: 4px;
+    }
+    h3 {
+      font-size: 1rem; font-weight: 700; color: #222;
+      border-left: 4px solid #e84b4b; padding-left: 10px;
+      margin: 24px 0 12px;
+    }
+    p { margin-bottom: 14px; line-height: 1.85; }
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { line-height: 1.85; margin-bottom: 4px; }
+
+    /* STEP boxes */
+    .step-list { list-style: none; padding: 0; margin-bottom: 20px; }
+    .step-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f0f0f0; }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      background: #e84b4b; color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      border-radius: 4px; padding: 3px 8px;
+      height: fit-content; flex-shrink: 0; white-space: nowrap;
+    }
+    .step-body strong { display: block; color: #222; margin-bottom: 4px; }
+    .step-body p { margin: 0; font-size: 0.9rem; color: #555; }
+
+    /* Callout */
+    .callout {
+      background: #eff6ff; border-left: 4px solid #2255cc;
+      padding: 14px 16px; border-radius: 0 6px 6px 0;
+      margin: 20px 0; font-size: 0.9rem;
+    }
+    .callout strong { color: #1133aa; display: block; margin-bottom: 4px; }
+
+    /* Comparison table */
+    .compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+    .compare-table th { background: #333; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+    .compare-table th:first-child { width: 30%; }
+    .compare-table td { padding: 10px 12px; border-bottom: 1px solid #eee; vertical-align: top; color: #444; }
+    .compare-table tr:nth-child(even) td { background: #f9f9f9; }
+    .compare-table .col-dmm { color: #cc2200; font-weight: 600; }
+    .compare-table .col-dl { color: #2255cc; font-weight: 600; }
+
+    /* Content grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px; margin: 16px 0;
+    }
+    .content-card {
+      border: 1px solid #e8e8e8; border-radius: 8px;
+      padding: 14px; background: #fafafa;
+    }
+    .content-card strong { display: block; color: #222; margin-bottom: 6px; font-size: 0.92rem; }
+    .content-card span { font-size: 0.82rem; color: #666; line-height: 1.6; }
+
+    /* Check list */
+    .check-list { list-style: none; padding: 0; }
+    .check-list li {
+      padding: 10px 10px 10px 32px; position: relative;
+      border-bottom: 1px solid #f0f0f0; font-size: 0.92rem;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before { content: "✓"; position: absolute; left: 8px; color: #e84b4b; font-weight: 700; }
+
+    /* CTA block */
+    .cta-block {
+      background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+      border-radius: 8px; padding: 24px;
+      text-align: center; margin: 32px 0; color: #fff;
+    }
+    .cta-block p { color: #bbb; font-size: 0.9rem; margin-bottom: 14px; }
+    .cta-btn {
+      display: inline-block; background: #e84b4b; color: #fff;
+      font-size: 1rem; font-weight: 700;
+      padding: 12px 32px; border-radius: 6px; text-decoration: none;
+    }
+    .cta-btn:hover { background: #c93030; text-decoration: none; }
+    .cta-note { font-size: 0.72rem; color: #888; margin-top: 8px; }
+
+    /* Sidebar */
+    .sidebar-box { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; margin-bottom: 20px; overflow: hidden; }
+    .sidebar-head { background: #222; color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; padding: 10px 14px; }
+    .sidebar-body { padding: 14px; }
+    .sidebar-cat-list { list-style: none; }
+    .sidebar-cat-list li { border-bottom: 1px solid #f0f0f0; }
+    .sidebar-cat-list li:last-child { border-bottom: none; }
+    .sidebar-cat-list a { display: flex; align-items: center; gap: 8px; padding: 10px 4px; color: #444; font-size: 0.88rem; text-decoration: none; }
+    .sidebar-cat-list a:hover { color: #e84b4b; text-decoration: none; }
+    .sidebar-banner { background: linear-gradient(135deg, #1a1a2e, #2d1b69); color: #fff; text-align: center; padding: 20px 14px; border-radius: 8px; margin-bottom: 20px; }
+    .sidebar-banner strong { display: block; font-size: 0.9rem; margin-bottom: 6px; }
+    .sidebar-banner p { font-size: 0.82rem; color: #bbb; margin-bottom: 12px; line-height: 1.6; }
+    .sidebar-banner a { display: inline-block; background: #e84b4b; color: #fff; font-size: 0.85rem; font-weight: 700; padding: 8px 20px; border-radius: 4px; text-decoration: none; }
+    .sidebar-banner a:hover { background: #c93030; text-decoration: none; }
+
+    /* Footer */
+    footer { background: #222; color: #999; font-size: 0.78rem; padding: 28px 20px; text-align: center; line-height: 2; }
+    footer a { color: #888; }
+    .footer-nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <span class="logo-icon">🌙</span>
+        <span class="logo-text">Moonshot <span>Digital</span></span>
+      </a>
+      <nav>
+        <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+        <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+        <a href="/articles/dmm-fanza-guide.html">DMM/FANZA</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <article>
+      <div class="breadcrumb">
+        <a href="/">Moonshot Digital</a> &rsaquo; <a href="/articles/dmm-fanza-guide.html">DMM / FANZA</a> &rsaquo; DMM（FANZA）デジタルコンテンツの選び方ガイド
+      </div>
+
+      <span class="pr-badge">PR・広告を含む記事です</span>
+      <span class="article-tag">DMM / FANZA</span>
+
+      <h1>DMM（FANZA）デジタルコンテンツの選び方ガイド【2026年版】</h1>
+      <div class="article-meta">2026年5月15日 更新 · Moonshot Digital · 読了時間 約7分</div>
+
+      <div class="toc">
+        <div class="toc-title">📋 この記事の目次</div>
+        <ol>
+          <li><a href="#what">DMMとFANZAの違い</a></li>
+          <li><a href="#content">取り扱いコンテンツの種類</a></li>
+          <li><a href="#vs-dlsite">DLsiteとの違い・使い分け</a></li>
+          <li><a href="#how">DMMでの探し方</a></li>
+          <li><a href="#point">DMMポイントの使い方</a></li>
+          <li><a href="#sale">お得に買う方法</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ol>
+      </div>
+
+      <h2 id="what">DMMとFANZAの違い</h2>
+      <p>DMMとFANZAは同じ会社（合同会社DMM.com）が運営するサービスですが、取り扱うコンテンツのカテゴリが異なります。</p>
+      <ul>
+        <li><strong>DMM</strong>：一般向けコンテンツ全般（動画・電子書籍・ゲーム・FX・英会話など）</li>
+        <li><strong>FANZA</strong>：アダルト向けコンテンツ専門（旧称：DMM.R18）</li>
+      </ul>
+      <p>どちらも同じDMMアカウント・DMMポイントで利用できるため、会員登録は1つで済みます。本記事ではデジタルコンテンツ（電子書籍・動画・同人）に絞って解説します。</p>
+
+      <div class="callout">
+        <strong>💡 ポイント</strong>
+        DMMとFANZAは共通のDMMアカウントで利用可能。ポイントも共通のため、どちらかのサービスで貯めたポイントを両方で使えます。
+      </div>
+
+      <h2 id="content">取り扱いコンテンツの種類</h2>
+      <p>DMMが取り扱うデジタルコンテンツは大きく4つのカテゴリに分かれます。</p>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <strong>📚 電子書籍</strong>
+          <span>マンガ・ライトノベル・写真集・雑誌。国内最大級の品揃えで、独占配信タイトルも多数。</span>
+        </div>
+        <div class="content-card">
+          <strong>🎬 動画</strong>
+          <span>アニメ・映画・バラエティ・ドキュメンタリー。単話購入・月額見放題の両方に対応。</span>
+        </div>
+        <div class="content-card">
+          <strong>🎮 PCゲーム</strong>
+          <span>美少女ゲーム・ノベルゲームなど。ダウンロード購入でいつでも遊べる。</span>
+        </div>
+        <div class="content-card">
+          <strong>📁 同人（FANZA同人）</strong>
+          <span>同人誌・同人ゲーム・同人音声。DLsiteと並ぶ国内最大級の同人プラットフォーム。</span>
+        </div>
+      </div>
+
+      <h2 id="vs-dlsite">DLsiteとの違い・使い分け</h2>
+      <p>DMM（FANZA同人）とDLsiteはどちらも同人コンテンツの2大プラットフォームです。どちらで買うべきか迷ったときは以下の比較を参考にしてください。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr><th>比較項目</th><th class="col-dmm">DMM / FANZA</th><th class="col-dl">DLsite</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>強いジャンル</strong></td>
+            <td>同人誌・マンガ・PCゲーム</td>
+            <td>同人音声・ASMR・同人ゲーム</td>
+          </tr>
+          <tr>
+            <td><strong>作品数</strong></td>
+            <td>同人誌が特に豊富</td>
+            <td>音声作品・ゲームが特に豊富</td>
+          </tr>
+          <tr>
+            <td><strong>価格帯</strong></td>
+            <td>概ね同水準</td>
+            <td>概ね同水準</td>
+          </tr>
+          <tr>
+            <td><strong>ポイント還元</strong></td>
+            <td>DMMポイント（最大20%還元）</td>
+            <td>DLsiteポイント（最大10%還元）</td>
+          </tr>
+          <tr>
+            <td><strong>セール頻度</strong></td>
+            <td>週1〜2回（規模が大きい）</td>
+            <td>月1〜2回（ポイントアップ型）</td>
+          </tr>
+          <tr>
+            <td><strong>独自サービス</strong></td>
+            <td>動画見放題・電子書籍・英会話など</td>
+            <td>DLチャンネル（同人レーベル）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>結論：</strong>同人音声・ゲームを探すなら<strong>DLsite</strong>、同人誌・マンガ・PCゲームを探すなら<strong>FANZA（DMM）</strong>が品揃えの面で有利です。両方に会員登録しておき、目的に応じて使い分けるのがベストです。</p>
+
+      <h2 id="how">DMMでの探し方</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-num">STEP 1</span>
+          <div class="step-body">
+            <strong>会員登録（無料）する</strong>
+            <p>DMM.comトップページから「会員登録」へ。メールアドレスとパスワードだけで登録できます。登録後すぐに購入可能。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 2</span>
+          <div class="step-body">
+            <strong>目的のカテゴリを選ぶ</strong>
+            <p>電子書籍・動画・PCゲーム・同人（FANZA）など、見たいジャンルのトップページへ移動。カテゴリごとにランキングが表示されます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 3</span>
+          <div class="step-body">
+            <strong>ランキング・新着・セールから探す</strong>
+            <p>各カテゴリのランキングページで人気作を確認。「セール中」フィルターで割引中の作品だけを表示できます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 4</span>
+          <div class="step-body">
+            <strong>サンプル・試し読みで内容を確認</strong>
+            <p>電子書籍は「試し読み」、動画は「無料サンプル再生」で購入前に内容を確認できます。</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 5</span>
+          <div class="step-body">
+            <strong>DMMポイントで購入</strong>
+            <p>クレジットカード・コンビニ払い・DMMポイントで購入可能。ポイントを事前にまとめ購入するとお得になる場合があります。</p>
+          </div>
+        </li>
+      </ul>
+
+      <h2 id="point">DMMポイントの使い方</h2>
+      <p>DMMポイントはDMM・FANZA全サービスで共通して使えるポイントです。効率よく貯めて使うことで実質的な購入コストを下げられます。</p>
+
+      <h3>ポイントの貯め方</h3>
+      <ul>
+        <li><strong>コンテンツ購入</strong>：購入金額の1〜20%がポイント還元（キャンペーンにより変動）</li>
+        <li><strong>ポイントの直接購入</strong>：まとめ買いでボーナスポイントが付くことがある</li>
+        <li><strong>キャンペーン参加</strong>：期間限定のポイントアッププログラムを活用</li>
+      </ul>
+
+      <h3>ポイントのお得な使い方</h3>
+      <ul class="check-list">
+        <li>ポイント還元率が高いセール期間中に購入してポイントを最大化</li>
+        <li>まとめて購入するより、セール×ポイント還元の組み合わせを狙う</li>
+        <li>有効期限（通常180日）を意識してこまめに使う</li>
+        <li>DMMプレミアム（月額550円）に加入すると動画見放題＋ポイント還元率アップ</li>
+      </ul>
+
+      <div class="callout">
+        <strong>💡 ポイント</strong>
+        DMMのセールは頻度が高く、週末に30〜50%ポイント還元セールが行われることもあります。ウィッシュリストに入れておいてセール時にまとめて購入するのが最もコスパが良い方法です。
+      </div>
+
+      <div class="cta-block">
+        <p>DMM・FANZAで電子書籍・動画・同人コンテンツを探してみましょう。国内最大級の品揃えと豊富なセール。</p>
+        <a class="cta-btn" href="https://www.dmm.com/" target="_blank" rel="nofollow noopener">DMM 公式サイトを見る →</a>
+        <div class="cta-note">※ 近日中にアフィリエイトリンクを追加予定です</div>
+      </div>
+
+      <h2 id="sale">お得に買う方法</h2>
+      <ul>
+        <li><strong>週末セール</strong>：毎週末に特定ジャンルのポイント還元率アップセールが開催</li>
+        <li><strong>初回特典</strong>：初めてポイントを購入する際に初回ボーナスがつく場合あり</li>
+        <li><strong>まとめ買いキャンペーン</strong>：同一作者・レーベルのまとめ買いで追加割引</li>
+        <li><strong>無料作品の活用</strong>：各カテゴリに無料試し読み・視聴作品が多数あり、登録だけで楽しめる</li>
+        <li><strong>DMMプレミアム</strong>：月額550円で動画見放題＋ポイント還元率が上乗せ</li>
+      </ul>
+
+      <h2 id="summary">まとめ</h2>
+      <p>DMM・FANZAは電子書籍・動画・同人コンテンツをワンストップで楽しめる国内最大級のデジタルプラットフォームです。</p>
+      <ul>
+        <li>DMMアカウント1つで電子書籍・動画・同人すべてに対応</li>
+        <li>同人誌・PCゲームはDMM/FANZAが、同人音声・ゲームはDLsiteが強い</li>
+        <li>DMMポイントを活用してセール時にまとめ買いするのが最もお得</li>
+        <li>サンプル・試し読みを必ず活用して購入ミスを防ぐ</li>
+      </ul>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-banner">
+        <strong>DMM 公式</strong>
+        <p>電子書籍・動画・同人コンテンツが揃う国内最大級のプラットフォーム。</p>
+        <a href="https://www.dmm.com/" target="_blank" rel="nofollow noopener">DMM を見る →</a>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">カテゴリ</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 同人音声・ASMR</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 同人ゲーム</a></li>
+            <li><a href="/articles/dmm-fanza-guide.html">📦 DMM / FANZA</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-head">関連記事</div>
+        <div class="sidebar-body">
+          <ul class="sidebar-cat-list">
+            <li><a href="/articles/dlsite-doujin-voice-guide.html">🎙 DLsite 同人音声・ASMRの選び方【2026年】</a></li>
+            <li><a href="/articles/dlsite-doujin-game-guide.html">🎮 DLsite 同人ゲームの選び方【2026年】</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/articles/dlsite-doujin-voice-guide.html">同人音声</a>
+      <a href="/articles/dlsite-doujin-game-guide.html">同人ゲーム</a>
+      <a href="/articles/dmm-fanza-guide.html">DMM/FANZA</a>
+    </div>
+    <p>【広告・PR】当サイトはDMMアフィリエイト・DLsiteアフィリエイトプログラムに参加しています。記事内のリンクから購入いただいた場合、当サイトに報酬が発生することがあります。</p>
+    <p style="margin-top:6px">© 2026 Moonshot Digital</p>
+  </footer>
+
+</body>
+</html>
