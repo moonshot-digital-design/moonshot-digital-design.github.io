@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moonshot-digital-design.github.io/sitemap.xml
