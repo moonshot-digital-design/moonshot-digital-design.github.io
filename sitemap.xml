@@ -43,4 +43,12 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://moonshot-digital-design.github.io/articles/dmm-tv-kanokari-s5-moso-ver.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
 </urlset>
